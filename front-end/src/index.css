@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.heroImg {
+    background-attachment: local;
+    /* background-repeat: no-repeat; */
+    object-fit: fill;
+    background-image: url("https://theprotocolgroup.co.uk/wp-content/uploads/2024/02/discussion-protocol-group.jpg");
+}
