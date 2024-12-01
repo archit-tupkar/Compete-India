@@ -6,6 +6,7 @@ import { Navbar } from "../components/Navbar";
 import { FaGoogle } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { IoMailSharp } from "react-icons/io5";
+import { GoogleLogin } from "@react-oauth/google";
 
 export const Signup = () => {
     const [formData, setFormData] = useState({});
@@ -51,10 +52,12 @@ export const Signup = () => {
         // handle format
         setLoading(true);
         // send signup request
-        const url = "";
+        const url = "http://localhost:3000/api/auth/signup";
         try {
             const response = await axios.post(url, formData);
             const data = response.data;
+            console.log(data);
+
             setError(false);
             setLoading(false);
             // ask user to login after signup
@@ -72,7 +75,7 @@ export const Signup = () => {
         <div className="mx-auto pb-4 px-4   rounded-xl max-w-lg text-text-1 text-lg md:text-xl">
             <form
                 onSubmit={(e) => handleSubmit(e)}
-                className="flex flex-col p-3 mt-24"
+                className="flex flex-col p-3 mt-6"
             >
                 <p className="font-bold text-4xl text-center m-3">Sign Up</p>
 
@@ -130,11 +133,19 @@ export const Signup = () => {
             <hr className="p-2 mt-4 w-1/2 mx-auto" />
             <div className="flex justify-center">
                 <div className="mx-3 cursor-pointer">
-                    <FaGoogle />
+                    <GoogleLogin
+                        onSuccess={(credentialResponse) => {
+                            console.log(credentialResponse);
+                            // retrieve data from here
+                        }}
+                        onError={() => {
+                            console.log("Login Failed");
+                        }}
+                    />
                 </div>
-                <div className="mx-3 cursor-pointer">
+                {/* <div className="mx-3 cursor-pointer">
                     <IoMailSharp />
-                </div>
+                </div> */}
             </div>
         </div>
     );
