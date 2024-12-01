@@ -1,29 +1,43 @@
 const questions = [
   {
-    question: "What is the capital city of Japan?",
+    question:
+      "The mass of the lift is 200 kg. When it ascends with an acceleration of 4 m/s², what is . the tension in the cable supporting the lift?",
     answers: [
-      { text: "Tokyo", correct: true },
-      { text: "Kyoto", correct: false },
-      { text: "Osaka", correct: false },
-      { text: "Hiroshima", correct: false },
+      { text: " 2800 N", correct: true },
+      { text: "800 N", correct: false },
+      { text: " 4200 N", correct: false },
+      { text: "2000 N", correct: false },
     ],
   },
   {
-    question: "Who painted the Mona Lisa?",
+    question:
+      "Which of the following statements about the Bohr model of the hydrogen atom is false?",
     answers: [
-      { text: "Vincent van Gogh", correct: false },
-      { text: "Pablo Picasso", correct: false },
-      { text: "Leonardo da Vinci", correct: true },
-      { text: "Claude Monet", correct: false },
+      {
+        text: "Acceleration of the electron in n = 2 orbit is less than that in n = 1 orbit",
+        correct: false,
+      },
+      {
+        text: " Angular momentum of the electron in n = 2 orbit is more than in n = 1 orbit",
+        correct: false,
+      },
+      {
+        text: "Potential Energy of the electron in n = 2 orbit is less than that in n = 1 orbit",
+        correct: true,
+      },
+      {
+        text: "Kinetic Energy of the electron in n = 2 orbit is less than that in n = 1 orbit	",
+        correct: false,
+      },
     ],
   },
   {
-    question: "What is the chemical symbol for Gold?",
+    question: "What is the value of gravitational acceleration on Earth?",
     answers: [
-      { text: "Au", correct: true },
-      { text: "Ag", correct: false },
-      { text: "Pb", correct: false },
-      { text: "Fe", correct: false },
+      { text: " 9.8 m/s²", correct: true },
+      { text: "8.9 m/s²", correct: false },
+      { text: "10.5 m/s²", correct: false },
+      { text: "12.6 m/s²", correct: false },
     ],
   },
   {
